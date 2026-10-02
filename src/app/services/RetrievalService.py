@@ -1,10 +1,11 @@
 from pinecone import Pinecone
 
-from langchain_ollama import OllamaEmbeddings
+from langchain_huggingface import HuggingFaceEndpointEmbeddings
 
 from app.config.settings import (
     PINECONE_API_KEY,
-    PINECONE_INDEX_NAME
+    PINECONE_INDEX_NAME,
+    HF_TOKEN
 )
 
 
@@ -12,8 +13,9 @@ class RetrievalService:
 
     def __init__(self):
 
-        self.embeddings = OllamaEmbeddings(
-            model="nomic-embed-text:latest"
+        self.embeddings = HuggingFaceEndpointEmbeddings(
+            repo_id="sentence-transformers/all-MiniLM-L6-v2",
+            huggingfacehub_api_token=HF_TOKEN
         )
 
         pc = Pinecone(
