@@ -1,28 +1,18 @@
-langgraph
+fastapi
+uvicorn
 
 langchain
 langchain-core
 langchain-community
+langchain-openai
+langchain-huggingface
 
-langchain-ollama
-langchain-postgres
-
-fastapi
-uvicorn
-
-sqlalchemy
-psycopg[binary]
-pgvector
+pinecone
 
 pydantic
 python-dotenv
 
 pypdf
-unstructured
 python-multipart
 
-GitPython
-
 tiktoken
-
-langsmith
