@@ -20,7 +20,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://localhost:3000",
-        "https://YOUR-FRONTEND-URL.onrender.com"
+        "https://spring-tutor-frontend.onrender.com"
     ],
     allow_credentials=True,
     allow_methods=["*"],
